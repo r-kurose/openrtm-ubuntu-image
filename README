@@ -1,0 +1,8 @@
+Ubuntu 用にビルドされた OpenRTM-aist です。
+/opt/openrtm を /opt/openrtm にコピーして使ってください
+
+例:
+FROM kuroseaist/openrtm-ubuntu:latest as openrtm
+FROM ubuntu:3.10
+COPY --from=openrtm /opt/openrtm /opt/openrtm
+...
